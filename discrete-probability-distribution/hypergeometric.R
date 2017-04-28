@@ -1,4 +1,4 @@
-N <- 10
+N <- 100
 
 for (k in 1:N) {
     labelx <- matrix (nrow = k, ncol = 1)

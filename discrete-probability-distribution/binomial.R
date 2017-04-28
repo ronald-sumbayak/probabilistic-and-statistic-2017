@@ -4,7 +4,7 @@ prob <- c (
     0.7,  0.75, 0.8,  0.85, 0.9,  0.95, 1
 )
 
-N <- 5
+N <- 100
 
 for (size in 1:N) {
     label <- matrix (nrow = (size+1), ncol = 1)

@@ -4,7 +4,7 @@ prob <- c (
     0.7,  0.75, 0.8,  0.85, 0.9,  0.95, 1
 )
 
-N <- 5
+N <- 100
 
 for (size in 1:N) {
     label <- matrix (nrow = (size+1), ncol = 1)
@@ -16,7 +16,7 @@ for (size in 1:N) {
     
     for (x in 0:size)
         for (p in 1:length (prob))
-            result[x+1,p] <- pnbinom (x, size, prob[p])
+            result[x+1,p] <- pnbinom (size-x, x, prob[p])
     
     print (paste (c ("N =", size), collapse = " "))
     print (format (round (result, digits = 4), nsmall = 4))
